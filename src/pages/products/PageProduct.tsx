@@ -214,14 +214,14 @@ export default function PageProduct() {
   return (
     <>
       <ModalNhomHangHoa
-        dataNhomHang={lstProduct}
+        dataNhomHang={lstProductGroup}
         show={showModalNhomHang}
         isNew={isNewNhomHang}
         id={idNhomHangHoa}
         handleClose={() => setShowModalNhomHang(false)}
         handleSave={saveNhomHang}></ModalNhomHangHoa>
       <ModalHangHoa
-        dataNhomHang={lstProduct}
+        dataNhomHang={lstProductGroup}
         show={showModalHangHoa}
         id={idNhomHangHoa}
         isNew={isNewProduct}

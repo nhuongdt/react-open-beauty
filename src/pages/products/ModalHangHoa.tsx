@@ -53,7 +53,7 @@ export function ModalHangHoa({ dataNhomHang, handleClose, handleSave, show, isNe
   const [laDonViTinhChuan, setLaDonViTinhChuan] = useState(1);
 
   function choseNhomHang(item: any) {
-    // setIdNhomHangHoa(item.id);
+    setIdNhomHangHoa(item.id);
     setTenNhomHang(item.tenNhomHang);
     console.log('idnhom ', item);
   }
@@ -145,7 +145,13 @@ export function ModalHangHoa({ dataNhomHang, handleClose, handleSave, show, isNe
                   disablePortal
                   value={idNhomHangHoa}
                   options={dataNhomHang.filter((x: ModelNhomHangHoa) => x.id != null)}
-                  onChange={(event, newValue) => choseNhomHang(newValue)}
+                  // onChange={(event: any, obj: any) => {
+                  //   setIdNhomHangHoa(obj.id);
+                  // }}
+                  inputValue={tenNhomHang ?? ''}
+                  onInputChange={(event: any, newInputValue: any) => {
+                    setTenNhomHang(newInputValue);
+                  }}
                   getOptionLabel={(option: ModelNhomHangHoa) =>
                     option.tenNhomHang ? option.tenNhomHang : ''
                   }

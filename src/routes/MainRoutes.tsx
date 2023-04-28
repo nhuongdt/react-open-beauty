@@ -9,8 +9,8 @@ const Sliderbar = lazy(() => import('../pages/layout/Sliderbar'));
 const MainRoutes = {
   element: <Sliderbar />,
   children: [
-    { path: '/product', element: <PageProduct /> },
-    { path: 'product', element: <PageProduct /> }
+    { path: '/home', element: <DashBoard /> },
+    { path: '/product', element: <PageProduct /> }
   ]
 };
 export default MainRoutes;

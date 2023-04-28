@@ -2,30 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-
+import { Auth0ProvideNavigate } from './pages/login/Auth0ProvideNavigate';
 import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: (
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    )
-  },
-  {
-    path: 'about',
-    element: <div>About</div>
-  }
-]);
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Auth0ProvideNavigate>
+        <App />
+      </Auth0ProvideNavigate>
     </BrowserRouter>
   </React.StrictMode>
   // <RouterProvider router={router} />
