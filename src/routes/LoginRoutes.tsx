@@ -4,11 +4,11 @@ const AuthLogin = lazy(() => import('../pages/login/Login'));
 const MinimalLayout = lazy(() => import('../pages/layout/MinimalLayout'));
 
 const LoginRoutes = {
-  path: '/',
+  path: '/login',
   element: <MinimalLayout />,
   children: [
     {
-      path: 'login',
+      path: '/login',
       element: <AuthLogin />
     },
     {

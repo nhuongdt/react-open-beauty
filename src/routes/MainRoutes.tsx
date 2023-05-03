@@ -8,6 +8,7 @@ const Sliderbar = lazy(() => import('../pages/layout/Sliderbar'));
 
 const MainRoutes = {
   element: <Sliderbar />,
+  path: '/',
   children: [
     { path: '/home', element: <DashBoard /> },
     { path: '/product', element: <PageProduct /> }
